@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /WEB-INF/decorators.xml -->
+<decorators defaultdir="/layout">
+<decorator name="member" page="memberlayout.jsp">
+<pattern>/model2/member/*</pattern>
+<pattern>/model2/chat/*</pattern>
+</decorator>
+<decorator name="board" page="boardlayout.jsp">
+<!--  <decorator name="board" page="boardlayout.jsp"> boardlayout에 소스 넣고 위에꺼 지우고 하기-->
+<pattern>/model2/board/*</pattern>
+<pattern>/model2/calendar/*</pattern>
+</decorator>
+<!-- sitemesh의 layout 설정 안함 -->
+<excludes>
+<pattern>/model2/member/id*</pattern>
+<pattern>/model2/member/pw*</pattern>
+<pattern>/model2/member/picture*</pattern>
+<pattern>/model2/member/password*</pattern>
+<pattern>/model2/board/imgupload*</pattern>
+<pattern>/model2/ajax/*</pattern>
+</excludes>
+</decorators>

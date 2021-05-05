@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /WEB-INF/sitemesh.xml -->
+<sitemesh>
+   <!-- decorators.xml이 실제 환경을 설정해주는곳이야 -->
+   <!-- name과 file의 이름이 같아야함 -->
+   <property name="decorators-file"
+           value="/WEB-INF/decorators.xml" />
+   <excludes file="${decorators-file}" />
+   <page-parsers>
+      <parser content-type="text/html"
+         class="com.opensymphony.module.sitemesh.parser.HTMLPageParser" />
+   </page-parsers>
+   <decorator-mappers>
+      <mapper class="com.opensymphony.module.sitemesh.mapper.ConfigDecoratorMapper">
+         <param name="config" value="${decorators-file}" />
+      </mapper>
+   </decorator-mappers>
+</sitemesh>
